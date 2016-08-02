@@ -22,3 +22,11 @@
 # Format
 
 Create problems using real tools for students to solve after brief introduction
+
+# Tentative Schedule
+
+* Thursday 9/29 - Basic Unix/Linux: 1:30pm-3:30pm
+* Wednesday 10/12 - SaM Cluster Usage: 9am-11am
+* Thursday 10/27 - Linux Power Tools: 10am-12pm 
+* Thursday 11/10 - Python programming: 1:30pm – 3:30pm 
+* Thursday 11/24 - R programming: 1:30pm – 3:30pm
