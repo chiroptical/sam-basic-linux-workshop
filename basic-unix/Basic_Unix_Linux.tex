@@ -1,5 +1,15 @@
-\PassOptionsToPackage{gray}{xcolor}
+%\PassOptionsToPackage{gray}{xcolor}
 \documentclass[hyperref={pdfpagelabels=false},12pt]{beamer}
+\mode<presentation>
+{
+ \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+ \usecolortheme{default} % or try albatross, beaver, crane, ...
+ \usefonttheme{default}  % or try serif, structurebold, ...
+ \setbeamertemplate{navigation symbols}{}
+ \setbeamertemplate{caption}[numbered]
+} 
+
+
 \usepackage[utf8]{inputenc}
 %\usepackage{multirow}
 %\usepackage{wasysym}
@@ -53,7 +63,7 @@ cd, pwd, mkdir, find
 
 \begin{frame}
 \frametitle{Handle Files}
-less, more, cat, ls, chmod, chown
+less, more, cat, ls, chmod, chown, umask
 \end{frame}
 
 \begin{frame}
@@ -62,11 +72,17 @@ less, more, cat, ls, chmod, chown
 
 \begin{frame}
 \frametitle{The Environment}
-ps, 
+aliases, ps, 
 \end{frame}
 
 \begin{frame}
 \frametitle{Simple Filters}
+head, tail, sort, uniq, tr, cut, paste 
+\end{frame}
+
+\begin{frame}
+\frametitle{More filters}
+awk, sed, grep
 \end{frame}
 
 \begin{frame}
@@ -76,7 +92,7 @@ wildcards, escaping and quoting, pipe and redirection, tee, variables
 
 \begin{frame}
 \frametitle{Remote Connectivity and Networks}
-ssh, scp, rsync
+ssh, scp, rsync, ftp, curl
 \end{frame}
 
 \begin{frame}
