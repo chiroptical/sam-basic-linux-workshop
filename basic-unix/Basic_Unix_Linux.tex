@@ -11,9 +11,9 @@
 } 
 
 \usepackage[utf8]{inputenc}
-%\usepackage{multirow}
-%\usepackage{wasysym}
-%\usepackage{upquote}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{helvet}
 \usepackage{listings}
 \usepackage{gensymb}
 \usepackage{array}
@@ -21,6 +21,7 @@
 \usepackage{xcolor}
 \usepackage{default}
 \usepackage{ulem}
+\usepackage{minted}
 
 %\usetheme{Pittsburgh}
 
@@ -37,44 +38,55 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Getting Started: Know your machine!}
+\frametitle{Getting Started}
 \centering
+\begin{itemize}
+    \item access to cluster, VPN, etc.
+    \item clone this repository
+\end{itemize}
+\end{frame}
 
+%\begin{frame}
+%\frametitle{How it all clicked!: A Brief History}
+%\centering
+%\end{frame}
+
+
+\begin{frame}
+\frametitle{General-purpose utilities}
+\centering
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-1.txt}
 \end{frame}
 
 \begin{frame}
-\frametitle{How it all clicked!: A Brief History}
+\frametitle{General purpose utilities cont.}
 \centering
-1970-\\
-1980-\\
-1990-\\
-2000-\\
-2010-\\
-\end{frame}
-
-\begin{frame}
-\frametitle{Understanding the Unix Command: Locate commands; internal vs. external}
-\centering
-\texttt{\$ apropos}\\ 
-\texttt{\$ locate}
-\end{frame}
-
-\begin{frame}
-\frametitle{General-purpose utilities: date, who, uname, echo, passwd, bc, man, time}
-\centering
-
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-2.txt}
 \end{frame}
 
 \begin{frame}
 \frametitle{Navigate the Filesystem}
 \centering
-cd, pwd, mkdir, find, df, du
+%cd, pwd, mkdir, find, df, du
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-1.txt}
 \end{frame}
 
 \begin{frame}
-\frametitle{Handle Files}
+\frametitle{Navigate the filesystem cont.}
 \centering
-less, more, cat, ls, wc, chmod, chown, umask, tar, gzip, gunzip
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-2.txt}
+\end{frame}
+
+\begin{frame}
+\frametitle{Navigate the filesystem cont.}
+\centering
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-3.txt}
+\end{frame}
+
+\begin{frame}
+\frametitle{Handle files}
+\centering
+%less, more, cat, wc, chmod, chown, umask, tar, gzip, gunzip
 \end{frame}
 
 \begin{frame}
@@ -124,7 +136,30 @@ cat /etc/issue
 \end{frame}
 
 \begin{frame}
+\frametitle{Understanding the Unix Command: Locate commands; internal vs. external}
+\centering
+\begin{itemize}
+    \item \mintinline{sh}{apropros}
+    \item \mintinline{sh}{locate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Exercises}
+\begin{enumerate}
+    \item Print system information on cluster (hint slide: )
+    \item Print your username using environment variables to the command line
+    (hint slide: )
+    \item What is $\pi$ to 10 digits of precision using the formula
+    $\pi=4\times\arctan(1)$? Hint: use man page to activate the ``standard math
+    library'' and determine the $\arctan$ function. Don't forget ``/'' searches!
+    \item How long does the calculation take?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercises cont.}
+
 \end{frame}
 
 \end{document}
