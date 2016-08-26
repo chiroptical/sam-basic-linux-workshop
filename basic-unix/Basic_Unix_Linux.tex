@@ -1,5 +1,15 @@
-\PassOptionsToPackage{gray}{xcolor}
+%\PassOptionsToPackage{gray}{xcolor}
 \documentclass[hyperref={pdfpagelabels=false},12pt]{beamer}
+\setbeamertemplate{frametitle}[default][center]
+\mode<presentation>
+{
+ \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+ \usecolortheme{default} % or try albatross, beaver, crane, ...
+ \usefonttheme{default}  % or try serif, structurebold, ...
+ \setbeamertemplate{navigation symbols}{}
+ \setbeamertemplate{caption}[numbered]
+} 
+
 \usepackage[utf8]{inputenc}
 %\usepackage{multirow}
 %\usepackage{wasysym}
@@ -27,33 +37,44 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Getting Started}
-Know your machine!
+\frametitle{Getting Started: Know your machine!}
+\centering
+
 \end{frame}
 
 \begin{frame}
-\frametitle{How it all clicked!}
-Brief History.
+\frametitle{How it all clicked!: A Brief History}
+\centering
+1970-\\
+1980-\\
+1990-\\
+2000-\\
+2010-\\
 \end{frame}
 
 \begin{frame}
-\frametitle{Understanding the Unix Command}
-Locate commands; internal vs. external.
+\frametitle{Understanding the Unix Command: Locate commands; internal vs. external}
+\centering
+\texttt{\$ apropos}\\ 
+\texttt{\$ locate}
 \end{frame}
 
 \begin{frame}
-\frametitle{General-purpose utilities}
-date, who, uname, echo, passwd, bc
+\frametitle{General-purpose utilities: date, who, uname, echo, passwd, bc, man, time}
+\centering
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Navigate the Filesystem}
-cd, pwd
+\centering
+cd, pwd, mkdir, find, df, du
 \end{frame}
 
 \begin{frame}
 \frametitle{Handle Files}
-less, more, cat, ls
+\centering
+less, more, cat, ls, wc, chmod, chown, umask, tar, gzip, gunzip
 \end{frame}
 
 \begin{frame}
@@ -62,18 +83,44 @@ less, more, cat, ls
 
 \begin{frame}
 \frametitle{The Environment}
+\centering
+aliases, ps, export, history, PS1, 
 \end{frame}
 
 \begin{frame}
 \frametitle{Simple Filters}
+\centering
+head, tail, sort, column, uniq, tr, cut, paste 
+\end{frame}
+
+\begin{frame}
+\frametitle{More filters}
+\centering
+awk, sed, grep
 \end{frame}
 
 \begin{frame}
 \frametitle{The Shell}
+\centering
+wildcards, escaping and quoting, pipe and redirection, tee, variables
 \end{frame}
 
 \begin{frame}
 \frametitle{Remote Connectivity and Networks}
+\centering
+ssh, scp, rsync, ftp, curl
+\end{frame}
+
+\begin{frame}
+\frametitle{Useful keyboard shortcuts}
+\centering
+ctrl-l, ctrl-e, ctrl-a, 
+\end{frame}
+
+\begin{frame}
+\frametitle{Useful one-liners}
+\centering
+cat /etc/issue
 \end{frame}
 
 \begin{frame}
@@ -81,5 +128,4 @@ less, more, cat, ls
 \end{frame}
 
 \end{document}
-
 
