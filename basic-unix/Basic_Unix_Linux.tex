@@ -26,8 +26,8 @@
 %\usetheme{Pittsburgh}
 
 \xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
-\title[Basic Unix/Linux]{{Basic Unix/Linux}}
-\author[Basic Unix/Linux]{{Kim, Barry, Ketan}}
+\title[Basic Unix/Linux]{{Basic Linux}}
+\author[Basic Unix/Linux]{{\textbf{Barry}, Fangping, Kim, Ketan}}
 \date{}
 
 \beamertemplatenavigationsymbolsempty
@@ -38,19 +38,43 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Getting Started}
+\frametitle{Schedule}
 \centering
 \begin{itemize}
-    \item access to cluster, VPN, etc.
-    \item clone this repository
+    \item Today: Basic Linux
+    \item : SaM Cluster Usage
+    \item : Linux Power Tools
+    \item : Python Programming
+    \item : R Programming
 \end{itemize}
 \end{frame}
 
-%\begin{frame}
-%\frametitle{How it all clicked!: A Brief History}
-%\centering
-%\end{frame}
+\begin{frame}{What will you learn today?}
+    \begin{itemize}
+        \item Quick introduction to Linux command line tools relating to:
+        \begin{itemize}
+            \item general purpose utilities
+            \item navigating file systems
+            \item handling files
+            \item the linux environment
+            \item filtering data
+            \item remote operations and copying files
+        \end{itemize}
+        \item Present the tools you will use during ``Linux Power Tools''
+    \end{itemize}
+\end{frame}
 
+\begin{frame}{What do we expect from you?}
+    \begin{itemize}
+        \item You have access to our cluster, or a command line
+        \item You are willing to learn and experiment on the command line
+        \item Basics about code snippets:
+        \begin{itemize}
+            \item Lines which begin with `\$' are commands with, or without, arguments
+            \item All other lines are output from those commands
+        \end{itemize}
+    \end{itemize}
+\end{frame}
 
 \begin{frame}
 \frametitle{General-purpose utilities}
@@ -84,13 +108,10 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Handle files}
+\frametitle{Handling files}
 \centering
 %less, more, cat, wc, chmod, chown, umask, tar, gzip, gunzip
-\end{frame}
-
-\begin{frame}
-\frametitle{The Shell}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-1.txt}
 \end{frame}
 
 \begin{frame}
@@ -130,12 +151,6 @@ ctrl-l, ctrl-e, ctrl-a,
 \end{frame}
 
 \begin{frame}
-\frametitle{Useful one-liners}
-\centering
-cat /etc/issue
-\end{frame}
-
-\begin{frame}
 \frametitle{Understanding the Unix Command: Locate commands; internal vs. external}
 \centering
 \begin{itemize}
@@ -150,10 +165,13 @@ cat /etc/issue
     \item Print system information on cluster (hint slide: )
     \item Print your username using environment variables to the command line
     (hint slide: )
-    \item What is $\pi$ to 10 digits of precision using the formula
-    $\pi=4\times\arctan(1)$? Hint: use man page to activate the ``standard math
-    library'' and determine the $\arctan$ function. Don't forget ``/'' searches!
-    \item How long does the calculation take?
+    \item Why was I getting the wrong answer for $\pi*\sqrt{2}$? Hint: use the
+    man page, look for ``scale'' under the ``VARIABLES'' section. The definition
+    of scale is located in the ``NUMBERS'' section. Don't forget ``/'' searches.
+    \item What is $\pi$ using the formula $\pi=4\times\arctan(1)$? Hint: use
+    man page to activate the ``standard math library'' and determine the
+    $\arctan$ function. Don't forget ``/'' searches!  \item How long does the
+    calculation take?
 \end{enumerate}
 \end{frame}
 

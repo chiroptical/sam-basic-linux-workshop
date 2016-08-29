@@ -6,20 +6,20 @@ fileThr=navigate-the-filesystem-3.txt
 
 width=50
 
-# Clean the compilation directory, to clean up output
-files=(
-.aux
-.log
-.nav
-.out
-.pdf
-.snm
-.toc
-)
-for i in ${files[@]}; do
-    rm ../*$i
-done
-rm -r ../_minted-Basic_Unix_Linux
+## Clean the compilation directory, to clean up output
+#files=(
+#.aux
+#.log
+#.nav
+#.out
+#.pdf
+#.snm
+#.toc
+#)
+#for i in ${files[@]}; do
+#    rm ../*$i
+#done
+#rm -r ../_minted-Basic_Unix_Linux
 
 echo "$ pwd" > $fileOne
 cd ..
@@ -28,33 +28,33 @@ cd -
 echo "" >> $fileOne
 
 echo "$ ls" >> $fileOne
-ls .. >> $fileOne
+ls ../examples | sed 's/\.\.\/examples//' >> $fileOne
 echo "" >> $fileOne
 
 echo "$ mkdir test; ls" >> $fileOne
-mkdir ../test
-ls -w $width .. >> $fileOne
-rm -r ../test
+mkdir ../examples/test
+ls -w $width ../examples >> $fileOne
+rm -r ../examples/test
 echo "" >> $fileOne
 
 echo "$ find . -name states.txt" > $fileTwo
-find .. -name states.txt >> $fileTwo
+find ../examples -name states.txt | sed 's/\.\.\/examples\///' >> $fileTwo
 echo "" >> $fileTwo
 
 echo "$ find . -type f" >> $fileTwo
-find .. -type f | sed 's/\.\.\///' | column -c $width >> $fileTwo
+find ../examples -type f | sed 's/\.\.\/examples\///' | column -c $width >> $fileTwo
 echo "" >> $fileTwo
 
-echo "$ find . -type d" >> $fileTwo
-find .. -type d | sed 's/\.\.\///' >> $fileTwo
-echo "" >> $fileTwo
+#echo "$ find . -type d" >> $fileTwo
+#find .. -type d | sed 's/\.\.\///' >> $fileTwo
+#echo "" >> $fileTwo
 
 echo "$ df -h" > $fileThr
 df -h >> $fileThr
 echo "" >> $fileThr
 
-echo "du -sh *" >> $fileThr
-cd ..
-du -sh * >> code/$fileThr
+echo "$ du -s *" >> $fileThr
+cd ../examples
+du -s * >> ../code/$fileThr
 cd -
 echo "" >> $fileThr
