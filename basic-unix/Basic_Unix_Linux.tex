@@ -3,10 +3,10 @@
 \setbeamertemplate{frametitle}[default][center]
 \mode<presentation>
 {
- \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+ \usetheme{Warsaw}      % or try Darmstadt, Madrid, Warsaw, ...
  \usecolortheme{default} % or try albatross, beaver, crane, ...
  \usefonttheme{default}  % or try serif, structurebold, ...
- \setbeamertemplate{navigation symbols}{}
+ \setbeamertemplate{footline}[frame number]
  \setbeamertemplate{caption}[numbered]
 } 
 
@@ -22,8 +22,18 @@
 \usepackage{default}
 \usepackage{ulem}
 \usepackage{minted}
+\usepackage{hyperref}
 
-%\usetheme{Pittsburgh}
+% Great Commands
+\newcommand{\ig}[2]{\includegraphics[width=#1\linewidth]{#2}}
+\newcommand{\mybutton}[2]{\hyperlink{#1}{\beamerbutton{{#2}}}}
+\newcommand{\myvbutton}[2]{\vfill\hyperlink{#1}{\beamerbutton{{#2}}}}
+
+% Color Scheme
+\definecolor{pittblue}{RGB}{28,41,87}
+\definecolor{pittgold}{RGB}{205,184,125}
+\setbeamercolor{structure}{fg=pittgold}
+\setbeamercolor{button}{bg=pittblue}
 
 \xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
 \title[Basic Unix/Linux]{{Basic Linux}}
@@ -33,19 +43,34 @@
 \beamertemplatenavigationsymbolsempty
 
 \begin{document}
+
+\begin{frame}[label=started]{Getting Started}
+    \begin{itemize}
+        \item Download the slides from: \url{https://pitt.box.com/v/basic-unix-slides}
+        \item Log into the cluster, or
+        \item Download git:
+        \begin{itemize}
+            \item Windows: install from \url{https://git-scm.com/downloads}
+            \item Mac: install from \url{https://git-scm.com/downloads}, port, or brew
+            \item Linux: install from package manager
+        \end{itemize}
+        \item Open Git bash (Windows) or Terminal Emulator (Mac/Linux)
+    \end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\scriptsize]{bash}{code/getting-started.txt}
+\myvbutton{navigate}{a clickable button}
+\end{frame}
+
 \begin{frame}[plain]
 \titlepage
 \end{frame}
 
-\begin{frame}
-\frametitle{Schedule}
-\centering
+\begin{frame}{Schedule}
 \begin{itemize}
     \item Today: Basic Linux
-    \item : SaM Cluster Usage
-    \item : Linux Power Tools
-    \item : Python Programming
-    \item : R Programming
+    \item Wednesday 10/12 (9am -- 11am): SaM Cluster Usage
+    \item Thursday 10/27 (10am -- 12pm): Linux Power Tools
+    \item Thursday 11/10 (1:30pm -- 3:30pm): Python Programming
+    \item Thursday 12/1 (8:00am -- 12:00pm): R Programming
 \end{itemize}
 \end{frame}
 
@@ -57,128 +82,138 @@
             \item navigating file systems
             \item handling files
             \item the linux environment
-            \item filtering data
+            \item filters
             \item remote operations and copying files
         \end{itemize}
-        \item Present the tools you will use during ``Linux Power Tools''
+        \item Present the tools and concepts for bash scripting
     \end{itemize}
 \end{frame}
 
 \begin{frame}{What do we expect from you?}
     \begin{itemize}
         \item You have access to our cluster, or a command line
-        \item You are willing to learn and experiment on the command line
-        \item Basics about code snippets:
+        \item You are following along with the code
+        \item Code snippets:
         \begin{itemize}
             \item Lines which begin with `\$' are commands with, or without, arguments
+            \item Lines which begin with `\#' are comments
             \item All other lines are output from those commands
+        \end{itemize}
+        \item Mantras:
+        \begin{itemize}
+            \item Tab completion is your friend
+            \item You are always typing too much
+            \item If you plan to do it more than once, write a script
         \end{itemize}
     \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{General-purpose utilities}
-\centering
+\begin{frame}[label=general-1]{General-purpose utilities}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-1.txt}
+\myvbutton{exercises-1}{exercises}
 \end{frame}
 
-\begin{frame}
-\frametitle{General purpose utilities cont.}
-\centering
+\begin{frame}[label=general-2]{General purpose utilities cont.}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-2.txt}
+\myvbutton{exercises-1}{exercises}
 \end{frame}
 
-\begin{frame}
-\frametitle{Navigate the Filesystem}
-\centering
-%cd, pwd, mkdir, find, df, du
+\begin{frame}[label=navigate]{Navigate the Filesystem}
+\mybutton{started}{change directory}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-1.txt}
 \end{frame}
 
-\begin{frame}
-\frametitle{Navigate the filesystem cont.}
-\centering
+\begin{frame}{The find command}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-2.txt}
 \end{frame}
 
-\begin{frame}
-\frametitle{Navigate the filesystem cont.}
-\centering
+\begin{frame}{How much space?}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-3.txt}
 \end{frame}
 
-\begin{frame}
-\frametitle{Handling files}
-\centering
+\begin{frame}{Handling files}
 %less, more, cat, wc, chmod, chown, umask, tar, gzip, gunzip
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-1.txt}
 \end{frame}
 
-\begin{frame}
-\frametitle{The Environment}
-\centering
-aliases, ps, export, history, PS1, 
+\begin{frame}{Handling files: Permissions}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-2.txt}
+\begin{center}
+    \ig{0.75}{images/permissions.png}
+\end{center}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-3.txt}
 \end{frame}
 
-\begin{frame}
-\frametitle{Simple Filters}
-\centering
-head, tail, sort, column, uniq, tr, cut, paste 
+\begin{frame}[label=environment]{The Environment}
+%aliases, ps, export, history, PS1
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/the-environment-1.txt}
+\myvbutton{exercises-1}{exercises}
 \end{frame}
 
-\begin{frame}
-\frametitle{More filters}
-\centering
-awk, sed, grep
+\begin{frame}{Aliasing -- Shortcuts}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/the-environment-2.txt}
+\begin{itemize}
+    \item \color{red}{Don't use these for ssh!}
+    \item \color{red}{Don't use these in scripts!}
+\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{The Shell}
-\centering
+\begin{frame}{History}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/the-environment-3.txt}
+\begin{itemize}
+    \item Good reference: \url{http://www.thegeekstuff.com/2011/08/bash-history-expansion/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Filters: head, tail}
+%head, tail, sort, column, uniq, tr, cut, paste 
+%awk, sed, grep
+\begin{itemize}
+    \item Filters are Linux power tools
+\end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-1.txt}
+\end{frame}
+
+\begin{frame}{Filters: sort, uniq, tr}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-2.txt}
+\end{frame}
+
+\begin{frame}{The Shell}
 wildcards, escaping and quoting, pipe and redirection, tee, variables
 \end{frame}
 
-\begin{frame}
-\frametitle{Remote Connectivity and Networks}
-\centering
+\begin{frame}{Remote Connectivity and Networks}
 ssh, scp, rsync, ftp, curl
 \end{frame}
 
-\begin{frame}
-\frametitle{Useful keyboard shortcuts}
-\centering
+\begin{frame}{Useful keyboard shortcuts}
 ctrl-l, ctrl-e, ctrl-a, 
 \end{frame}
 
-\begin{frame}
-\frametitle{Understanding the Unix Command: Locate commands; internal vs. external}
-\centering
+\begin{frame}{Understanding the Unix Command: Locate commands; internal vs. external}
 \begin{itemize}
     \item \mintinline{sh}{apropros}
     \item \mintinline{sh}{locate}
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Exercises}
+\begin{frame}[label=exercises-1]{Exercises}
 \begin{enumerate}
-    \item Print system information on cluster (hint slide: )
-    \item Print your username using environment variables to the command line
-    (hint slide: )
+    \item Print system information on cluster (\mybutton{general-1}{hint})
+    \item Print your username using environment variables to the command line (\mybutton{environment}{hint})
     \item Why was I getting the wrong answer for $\pi*\sqrt{2}$? Hint: use the
     man page, look for ``scale'' under the ``VARIABLES'' section. The definition
     of scale is located in the ``NUMBERS'' section. Don't forget ``/'' searches.
+    (\mybutton{general-2}{hint})
     \item What is $\pi$ using the formula $\pi=4\times\arctan(1)$? Hint: use
     man page to activate the ``standard math library'' and determine the
-    $\arctan$ function. Don't forget ``/'' searches!  \item How long does the
-    calculation take?
+    $\arctan$ function. Don't forget ``/'' searches! (\mybutton{general-2}{hint})
+    \item How long does the calculation take? (\mybutton{general-2}{hint})
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
-\frametitle{Exercises cont.}
+\begin{frame}{Exercises cont.}
 
 \end{frame}
 
 \end{document}
-

@@ -1,53 +1,53 @@
 =============================================
 State          Abbr     Postal    Capital
 =============================================
-Alabama        Ala.       AL     Montgomery
-Alaska         Alaska     AK     Juneau
-Arizona        Ariz.      AZ     Phoenix
-Arkansas       Ark.       AR     Little Rock
-California     Calif.     CA     Sacramento
-Colorado       Colo.      CO     Denver
-Connecticut    Conn.      CT     Hartford
-Delaware       Del.       DE     Dover
-Florida        Fla.       FL     Tallahassee
-Georgia        Ga.        GA     Atlanta
-Hawaii         Hawaii     HI     Honolulu
-Idaho          Idaho      ID     Boise
-Illinois       Ill.       IL     Springfield
-Indiana        Ind.       IN     Indianapolis
-Iowa           Iowa       IA     Des Moines
-Kansas         Kans.      KS     Topeka
-Kentucky       Ky.        KY     Frankfort
-Louisiana      La.        LA     Baton Rouge
-Maine          Maine      ME     Augusta
-Maryland       Md.        MD     Annapolis
-Massachusetts  Mass.      MA     Boston
-Michigan       Mich.      MI     Lansing
 Minnesota      Minn.      MN     St. Paul
-Mississippi    Miss.      MS     Jackson
-Missouri       Mo.        MO     Jefferson City
-Montana        Mont.      MT     Helena
-Nebraska       Nebr.      NE     Lincoln
-Nevada         Nev.       NV     Carson City
-New Hampshire  N.H.       NH     Concord
-New Jersey     N.J.       NJ     Trenton
-New Mexico     N.M.       NM     Santa Fe
-New York       N.Y.       NY     Albany
-North Carolina N.C.       NC     Raleigh
 North Dakota   N.D.       ND     Bismarck
-Ohio           Ohio       OH     Columbus
-Oklahoma       Okla.      OK     Oklahoma City
-Oregon         Ore.       OR     Salem
-Pennsylvania   Pa.        PA     Harrisburg
-Rhode Island   R.I.       RI     Providence
-South Carolina S.C.       SC     Columbia
-South Dakota   S.D.       SD     Pierre
-Tennessee      Tenn.      TN     Nashville
-Texas          Tex.       TX     Austin
-Utah           Utah       UT     Salt Lake City
-Vermont        Vt.        VT     Montpelier
-Virginia       Va.        VA     Richmond
-Washington     Wash.      WA     Olympia
 West Virginia  W.Va.      WV     Charleston
-Wisconsin      Wis.       WI     Madison
+Alaska         Alaska     AK     Juneau
+Louisiana      La.        LA     Baton Rouge
+Georgia        Ga.        GA     Atlanta
+Massachusetts  Mass.      MA     Boston
+Idaho          Idaho      ID     Boise
+Michigan       Mich.      MI     Lansing
+Vermont        Vt.        VT     Montpelier
+New York       N.Y.       NY     Albany
+Delaware       Del.       DE     Dover
+Nevada         Nev.       NV     Carson City
+Alabama        Ala.       AL     Montgomery
+Kentucky       Ky.        KY     Frankfort
+Ohio           Ohio       OH     Columbus
+Mississippi    Miss.      MS     Jackson
+Pennsylvania   Pa.        PA     Harrisburg
+Arizona        Ariz.      AZ     Phoenix
+Colorado       Colo.      CO     Denver
+New Hampshire  N.H.       NH     Concord
+Utah           Utah       UT     Salt Lake City
+South Carolina S.C.       SC     Columbia
+Rhode Island   R.I.       RI     Providence
+Illinois       Ill.       IL     Springfield
+Iowa           Iowa       IA     Des Moines
+Missouri       Mo.        MO     Jefferson City
+Oklahoma       Okla.      OK     Oklahoma City
+Texas          Tex.       TX     Austin
+Kansas         Kans.      KS     Topeka
+Oregon         Ore.       OR     Salem
+New Mexico     N.M.       NM     Santa Fe
 Wyoming        Wyo.       WY     Cheyenne
+Tennessee      Tenn.      TN     Nashville
+New Jersey     N.J.       NJ     Trenton
+Indiana        Ind.       IN     Indianapolis
+Connecticut    Conn.      CT     Hartford
+North Carolina N.C.       NC     Raleigh
+Wisconsin      Wis.       WI     Madison
+Maine          Maine      ME     Augusta
+Virginia       Va.        VA     Richmond
+Arkansas       Ark.       AR     Little Rock
+Washington     Wash.      WA     Olympia
+South Dakota   S.D.       SD     Pierre
+California     Calif.     CA     Sacramento
+Maryland       Md.        MD     Annapolis
+Nebraska       Nebr.      NE     Lincoln
+Hawaii         Hawaii     HI     Honolulu
+Florida        Fla.       FL     Tallahassee
+Montana        Mont.      MT     Helena

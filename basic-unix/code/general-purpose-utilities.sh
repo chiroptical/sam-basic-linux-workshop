@@ -28,6 +28,6 @@ echo "" >> $fileTwo
 echo "$ man bc" >> $fileTwo
 echo "" >> $fileTwo
 
-echo "$ time echo \"scale=5;3.14159 * sqrt(2.0)\" | bc" >> $fileTwo
-(time echo "scale=5;3.14159 * sqrt(2.0)" | bc) >> $fileTwo 2>&1
+echo "$ time echo \"3.14159 * sqrt(2.0)\" | bc" >> $fileTwo
+(time echo "3.14159 * sqrt(2.0)" | bc) >> $fileTwo 2>&1
 echo "" >> $fileTwo
