@@ -39,20 +39,19 @@ echo "" >> $fileTwo
 
 echo "$ history" > $fileThr
 echo "" >> $fileThr
-
 echo "# Execute last command" >> $fileThr
 echo "$ !!" >> $fileThr
 echo "" >> $fileThr
-
-echo "# man page of last command that starts with" >> $fileThr
-echo "$ man !ls" >> $fileThr
-echo "" >> $fileThr
-
 echo "# Execute last command which starts with" >> $fileThr
 echo "#  with an additional flag" >> $fileThr
 echo "$ !ls -l" >> $fileThr
 echo "" >> $fileThr
-
 echo "# Execute specific command in history" >> $fileThr
 echo "!42" >> $fileThr
+echo "" >> $fileThr
+echo "# Search history for last command which contains" >> $fileThr
+echo "!?-l" >> $fileThr
+echo "" >> $fileThr
+echo "# Get a specific argument of a previous command in history" >> $fileThr
+echo "echo !?hello.py:1" >> $fileThr
 echo "" >> $fileThr

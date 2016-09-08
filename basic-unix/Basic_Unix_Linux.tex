@@ -48,13 +48,13 @@
     \begin{itemize}
         \item Download the slides from: \url{https://pitt.box.com/v/basic-unix-slides}
         \item Log into the cluster, or
-        \item Download git:
+        \item If you don't have access to the cluster, download Git
         \begin{itemize}
             \item Windows: install from \url{https://git-scm.com/downloads}
-            \item Mac: install from \url{https://git-scm.com/downloads}, port, or brew
+            \item Mac: install from \url{https://git-scm.com/downloads}, port or brew
             \item Linux: install from package manager
         \end{itemize}
-        \item Open Git bash (Windows) or Terminal Emulator (Mac/Linux)
+        \item Open Putty/Git bash (Windows) or Terminal Emulator (Mac/Linux)
     \end{itemize}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\scriptsize]{bash}{code/getting-started.txt}
 \myvbutton{navigate}{a clickable button}
@@ -82,10 +82,10 @@
             \item navigating file systems
             \item handling files
             \item the linux environment
-            \item filters
+            \item basic filters
             \item remote operations and copying files
         \end{itemize}
-        \item Present the tools and concepts for bash scripting
+        \item Present tools and concepts for bash scripting
     \end{itemize}
 \end{frame}
 
@@ -178,42 +178,64 @@
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-2.txt}
 \end{frame}
 
-\begin{frame}{The Shell}
-wildcards, escaping and quoting, pipe and redirection, tee, variables
+\begin{frame}{Filters: grep, awk, sed}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-3.txt}
 \end{frame}
 
-\begin{frame}{Remote Connectivity and Networks}
-ssh, scp, rsync, ftp, curl
-\end{frame}
-
-\begin{frame}{Useful keyboard shortcuts}
-ctrl-l, ctrl-e, ctrl-a, 
-\end{frame}
-
-\begin{frame}{Understanding the Unix Command: Locate commands; internal vs. external}
+\begin{frame}{The Lynyrd Skynyrd Filter}
 \begin{itemize}
-    \item \mintinline{sh}{apropros}
-    \item \mintinline{sh}{locate}
+    \item Southern Rock Band, `y' is their vowel of choice.
+    \item Replace all of the vowels in `doctored.txt' with `y'
+\end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-4.txt}
+\begin{itemize}
+    \item Try this filter on `names.txt', is the behavior expected?
 \end{itemize}
 \end{frame}
 
+\begin{frame}{The Shell: Wildcards}
+\begin{itemize}
+    \item You have been working in the Bash shell this whole time!
+\end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-1.txt}
+%wildcards, escaping and quoting, redirection, tee
+\end{frame}
+
+\begin{frame}{The Shell: Redirection}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-2.txt}
+\end{frame}
+
+\begin{frame}{Remote Connectivity and Networks}
+%ssh, scp, rsync, ftp, curl
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/ssh-config-1.txt}
+\end{frame}
+
+%\begin{frame}{Useful keyboard shortcuts}
+%%ctrl-l, ctrl-e, ctrl-a, 
+%\end{frame}
+
+%\begin{frame}{Understanding the Unix Command: Locate commands; internal vs. external}
+%\begin{itemize}
+%    \item \mintinline{sh}{apropros}
+%    \item \mintinline{sh}{locate}
+%\end{itemize}
+%\end{frame}
+
 \begin{frame}[label=exercises-1]{Exercises}
-\begin{enumerate}
+\begin{itemize}
     \item Print system information on cluster (\mybutton{general-1}{hint})
-    \item Print your username using environment variables to the command line (\mybutton{environment}{hint})
+    \item Print your username using environment variables to the command line
+    (\mybutton{environment}{hint})
     \item Why was I getting the wrong answer for $\pi*\sqrt{2}$? Hint: use the
     man page, look for ``scale'' under the ``VARIABLES'' section. The definition
     of scale is located in the ``NUMBERS'' section. Don't forget ``/'' searches.
     (\mybutton{general-2}{hint})
     \item What is $\pi$ using the formula $\pi=4\times\arctan(1)$? Hint: use
     man page to activate the ``standard math library'' and determine the
-    $\arctan$ function. Don't forget ``/'' searches! (\mybutton{general-2}{hint})
+    $\arctan$ function. Don't forget ``/'' searches!
+    (\mybutton{general-2}{hint})
     \item How long does the calculation take? (\mybutton{general-2}{hint})
-\end{enumerate}
-\end{frame}
-
-\begin{frame}{Exercises cont.}
-
+\end{itemize}
 \end{frame}
 
 \end{document}

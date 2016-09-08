@@ -20,8 +20,8 @@ echo "$ wc -l states.txt" >> $fileOne
 wc -l ../examples/states.txt | sed 's/\.\.\/examples\///' >> $fileOne
 echo "" >> $fileOne
 
-echo "$ ls -lh" > $fileTwo
-ls -lh ../examples | fold -w $width >> $fileTwo
+echo "$ ls -lh hello.py" > $fileTwo
+ls -lh ../examples/hello.py | fold -w $width >> $fileTwo
 echo "" >> $fileTwo
 
 cp ../examples/hello.py .
@@ -29,5 +29,6 @@ echo "$ chmod u+x,g+wx,o+rwx hello.py" > $fileThr
 chmod u+x,g+wx,o+rwx hello.py
 echo "$ ls -l hello.py" >> $fileThr
 ls -l hello.py | fold -w $width >> $fileThr
+chmod u-x,g-wx,o-rwx hello.py
 echo ""
 rm hello.py

@@ -22,8 +22,8 @@ width=50
 #rm -r ../_minted-Basic_Unix_Linux
 
 echo "$ pwd" > $fileOne
-cd ..
-pwd | fold -w $width >> code/$fileOne
+cd ../examples
+pwd | fold -w $width >> ../code/$fileOne
 cd -
 echo "" >> $fileOne
 
@@ -45,6 +45,10 @@ echo "$ find . -type f" >> $fileTwo
 find ../examples -type f | sed 's/\.\.\/examples\///' | column -c $width >> $fileTwo
 echo "" >> $fileTwo
 
+echo "# Find files greater than 1GB" >> $fileTwo
+echo "$ find . -size +1GB" >> $fileTwo
+echo "" >> $fileTwo
+
 #echo "$ find . -type d" >> $fileTwo
 #find .. -type d | sed 's/\.\.\///' >> $fileTwo
 #echo "" >> $fileTwo
@@ -58,3 +62,10 @@ cd ../examples
 du -s * >> ../code/$fileThr
 cd -
 echo "" >> $fileThr
+
+echo "$ free -g" >> $fileThr
+echo "# not available on Mac (I use \`hostinfo | grep memory\` below)" | fold -w $width >> $fileThr
+hostinfo | grep "memory" >> $fileThr
+echo "" >> $fileThr
+
+echo "$ htop # if on cluster, or have it installed" >> $fileThr 

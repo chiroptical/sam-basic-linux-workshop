@@ -3,6 +3,7 @@
 fileOne=simple-filters-1.txt
 fileTwo=simple-filters-2.txt
 fileThr=simple-filters-3.txt
+fileFou=simple-filters-4.txt
 # 18 rows and 50 columns works for fontsize=\footnotesize
 width=50
 
@@ -49,3 +50,23 @@ echo "" >> $fileTwo
 echo "$ echo \"Hello      World\" | tr -s [:space:]" >> $fileTwo
 echo \"Hello      World\" | tr -s [:space:] >> $fileTwo
 echo "" >> $fileTwo
+
+echo "$ grep \"Alaska\" states.txt" > $fileThr
+grep Alaska ../examples/states.txt >> $fileThr
+echo "" >> $fileThr
+
+echo "$ awk '{print \$1}' names.txt | tail -6" >> $fileThr
+awk '{print $1}' ../examples/names.txt | tail -6 >> $fileThr
+echo "" >> $fileThr
+
+echo "$ sed 's/^[Ee]rin/Eryn/' names.txt | tail -6" >> $fileThr
+sed 's/^[Ee]rin/Eryn/' ../examples/names.txt | tail -6 >> $fileThr
+echo "" >> $fileThr
+
+echo "$ sed 's/[aeiou]/y/g' names.txt | tail -6" > $fileFou
+sed 's/[aeiou]/y/g' ../examples/names.txt | tail -6 >> $fileFou
+echo "" >> $fileFou
+
+echo "$ sed 's/[aeiou]/y/g' doctored.txt | tail -6" > $fileFou
+sed 's/[aeiou]/y/g' ../examples/doctored.txt | tail -6 >> $fileFou
+echo "" >> $fileFou
