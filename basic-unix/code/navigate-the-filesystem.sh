@@ -46,7 +46,7 @@ find ../examples -type f | sed 's/\.\.\/examples\///' | column -c $width >> $fil
 echo "" >> $fileTwo
 
 echo "# Find files greater than 1GB" >> $fileTwo
-echo "$ find . -size +1GB" >> $fileTwo
+echo "$ find . -size +1G" >> $fileTwo
 echo "" >> $fileTwo
 
 #echo "$ find . -type d" >> $fileTwo
