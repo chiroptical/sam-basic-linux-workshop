@@ -3,6 +3,7 @@
 fileOne=handling-files-1.txt
 fileTwo=handling-files-2.txt
 fileThr=handling-files-3.txt
+fileFou=handling-files-4.txt
 # 18 rows and 50 columns works for fontsize=\footnotesize
 width=50
 
@@ -20,6 +21,10 @@ echo "$ wc -l states.txt" >> $fileOne
 wc -l ../examples/states.txt | sed 's/\.\.\/examples\///' >> $fileOne
 echo "" >> $fileOne
 
+#echo "$ stat states.txt" >> $fileOne
+#stat ../examples/states.txt | sed 's/\.\.\/examples\///' >> $fileOne
+#echo "" >> $fileOne
+
 echo "$ ls -lh hello.py" > $fileTwo
 ls -lh ../examples/hello.py | fold -w $width >> $fileTwo
 echo "" >> $fileTwo
@@ -32,3 +37,8 @@ ls -l hello.py | fold -w $width >> $fileThr
 chmod u-x,g-wx,o-rwx hello.py
 echo ""
 rm hello.py
+
+echo "$ cat states.txt names.txt" > $fileFou
+echo "$ table -c states.txt" >> $fileFou
+echo "$ cut -d\\  -f1 states.txt" >> $fileFou 
+echo "$ paste states.txt states.txt" >> $fileFou

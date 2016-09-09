@@ -47,9 +47,13 @@ echo "" >> $fileTwo
 echo "$ tr [a-z] [A-Z] < names.txt | sort -u" >> $fileTwo
 echo "" >> $fileTwo
 
-echo "$ echo \"Hello      World\" | tr -s [:space:]" >> $fileTwo
-echo \"Hello      World\" | tr -s [:space:] >> $fileTwo
-echo "" >> $fileTwo
+#echo "$ echo \"Hello      World\" | tr -s [:space:]" >> $fileTwo
+#echo \"Hello      World\" | tr -s [:space:] >> $fileTwo
+#echo "" >> $fileTwo
+
+echo "$ echo \"Leeeeeeeeeeeeeeeeeeeeemon\" | tr -s 'e' 'e'" >> $fileTwo
+echo \"Leeeeeeeeeeeeeeeeeeeeemon\" | tr -s 'e' 'e' >> $fileTwo
+echo "" >> $fileThr
 
 echo "$ grep \"Alaska\" states.txt" > $fileThr
 grep Alaska ../examples/states.txt >> $fileThr

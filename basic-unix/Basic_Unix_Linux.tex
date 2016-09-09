@@ -37,7 +37,8 @@
 
 \xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
 \title[Basic Unix/Linux]{{Basic Linux}}
-\author[Basic Unix/Linux]{{\textbf{Barry}, Fangping, Kim, Ketan}}
+\author[Basic Unix/Linux]{{\textbf{Barry} (bmooreii), Fangping (fangping), Kim (kimwong), Ketan (ketan)}}
+\institute[CRC]{Center for Research Computing}
 \date{}
 
 \beamertemplatenavigationsymbolsempty
@@ -67,7 +68,7 @@
 \begin{frame}{Schedule}
 \begin{itemize}
     \item Today: Basic Linux
-    \item Wednesday 10/12 (9am -- 11am): SaM Cluster Usage
+    \item Wednesday 10/12 (9am -- 11am): CRC Cluster Usage
     \item Thursday 10/27 (10am -- 12pm): Linux Power Tools
     \item Thursday 11/10 (1:30pm -- 3:30pm): Python Programming
     \item Thursday 12/1 (8:00am -- 12:00pm): R Programming
@@ -97,6 +98,7 @@
         \begin{itemize}
             \item Lines which begin with `\$' are commands with, or without, arguments
             \item Lines which begin with `\#' are comments
+            \item `<something>' means I want input from you
             \item All other lines are output from those commands
         \end{itemize}
         \item Mantras:
@@ -142,6 +144,11 @@
     \ig{0.75}{images/permissions.png}
 \end{center}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-3.txt}
+\end{frame}
+
+\begin{frame}{Handling files: ``cut and paste'' operations}
+% cat, table, cut, paste
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-4.txt}
 \end{frame}
 
 \begin{frame}[label=environment]{The Environment}
@@ -195,7 +202,8 @@
 
 \begin{frame}{The Shell: Wildcards}
 \begin{itemize}
-    \item You have been working in the Bash shell this whole time!
+    \item You are working in a ``shell'' right now!
+    \item This one is Bash, but there are others.
 \end{itemize}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-1.txt}
 %wildcards, escaping and quoting, redirection, tee
@@ -210,16 +218,33 @@
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/ssh-config-1.txt}
 \end{frame}
 
-%\begin{frame}{Useful keyboard shortcuts}
-%%ctrl-l, ctrl-e, ctrl-a, 
-%\end{frame}
+\begin{frame}{Compression}
+    \begin{itemize}
+        \item tar
+    \end{itemize}
+\end{frame}
 
-%\begin{frame}{Understanding the Unix Command: Locate commands; internal vs. external}
-%\begin{itemize}
-%    \item \mintinline{sh}{apropros}
-%    \item \mintinline{sh}{locate}
-%\end{itemize}
-%\end{frame}
+\begin{frame}{``Scripts''}
+    \begin{itemize}
+        \item PBS script for example. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Are you overwhelmed?}
+    \begin{itemize}
+        \item Post a ticket and ask for help: \url{http://core.sam.pitt.edu/support-howto}
+        \item CRC (formerly SaM) has an open door policy!
+        \item Office Hours:
+        \begin{itemize}
+            \item Monday,Wednesday 10-11am in Benedum 1145 
+            \item Doesn't work for you? Come bug me!
+        \end{itemize}
+        \item Town Hall (Open Forum):
+        \begin{itemize}
+            \item First Thursday of the Month 11am-12pm in Benedum 1145
+        \end{itemize}
+    \end{itemize}
+\end{frame}
 
 \begin{frame}[label=exercises-1]{Exercises}
 \begin{itemize}

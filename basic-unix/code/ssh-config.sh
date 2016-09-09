@@ -7,8 +7,8 @@ width=50
 
 echo "# Standard ssh and scp" > $fileOne
 echo "$ ssh bmooreii@frank.sam.pitt.edu" >> $fileOne
-echo "$ scp <somelocalfile> bmooreii@pitt.edu:~" >> $fileOne
-echo "$ scp bmooreii@pitt.edu:<someremotefile> ." >> $fileOne
+echo "$ scp <somelocalfile> bmooreii@frank.sam.pitt.edu:~" >> $fileOne
+echo "$ scp bmooreii@frank.sam.pitt.edu:<someremotefile> ." >> $fileOne
 echo "" >> $fileOne
 
 echo "# Put this into ~/.ssh/config" >> $fileOne
@@ -25,5 +25,5 @@ echo "" >> $fileOne
 
 echo "# Compressed SSH data transfer" >> $fileOne
 echo "$ scp -C frank:<someremotefile> ." >> $fileOne
-echo "$ rsync -e ssh -avz frank:<someremotefile> ." >> $fileOne
+echo "$ rsync -avz frank:<someremotefile> ." >> $fileOne
 echo "" >> $fileOne

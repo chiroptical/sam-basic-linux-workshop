@@ -49,9 +49,9 @@ echo "# Find files greater than 1GB" >> $fileTwo
 echo "$ find . -size +1G" >> $fileTwo
 echo "" >> $fileTwo
 
-#echo "$ find . -type d" >> $fileTwo
-#find .. -type d | sed 's/\.\.\///' >> $fileTwo
-#echo "" >> $fileTwo
+echo "$ find . -name \"*.txt\" -or -name \"*.py\"" >> $fileTwo
+find ../examples -name "*.txt" -o -name "*.py" | sed 's/\.\.\/examples\///' >> $fileTwo
+echo "" >> $fileTwo
 
 echo "$ df -h" > $fileThr
 df -h >> $fileThr
@@ -64,7 +64,7 @@ cd -
 echo "" >> $fileThr
 
 echo "$ free -g" >> $fileThr
-echo "# not available on Mac (I use \`hostinfo | grep memory\` below)" | fold -w $width >> $fileThr
+echo " not available on Mac (I use \`hostinfo | grep memory\` below)" | fold -w $width | sed 's/^/#/' >> $fileThr
 hostinfo | grep "memory" >> $fileThr
 echo "" >> $fileThr
 
