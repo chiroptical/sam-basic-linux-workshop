@@ -26,7 +26,7 @@ echo "" >> $fileOne
 #echo "" >> $fileOne
 
 echo "$ ls -lh hello.py" > $fileTwo
-ls -lh ../examples/hello.py | fold -w $width >> $fileTwo
+ls -lh ../examples/hello.py | sed 's/\.\.\/examples\///' | fold -w $width >> $fileTwo
 echo "" >> $fileTwo
 
 cp ../examples/hello.py .
@@ -39,6 +39,6 @@ echo ""
 rm hello.py
 
 echo "$ cat states.txt names.txt" > $fileFou
-echo "$ table -c states.txt" >> $fileFou
 echo "$ cut -d\\  -f1 states.txt" >> $fileFou 
 echo "$ paste states.txt states.txt" >> $fileFou
+echo "$ nl states.txt" >> $fileFou

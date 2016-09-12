@@ -1,0 +1,62 @@
+%\PassOptionsToPackage{gray}{xcolor}
+\documentclass[hyperref={pdfpagelabels=false},12pt]{beamer}
+\setbeamertemplate{frametitle}[default][center]
+\mode<presentation>
+{
+ \usetheme{Warsaw}      % or try Darmstadt, Madrid, Warsaw, ...
+ \usecolortheme{default} % or try albatross, beaver, crane, ...
+ \usefonttheme{default}  % or try serif, structurebold, ...
+ \setbeamertemplate{footline}[frame number]
+ \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{helvet}
+\usepackage{listings}
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage{default}
+\usepackage{ulem}
+\usepackage{minted}
+\usepackage{hyperref}
+
+% Great Commands
+\newcommand{\ig}[2]{\includegraphics[width=#1\linewidth]{#2}}
+\newcommand{\mybutton}[2]{\hyperlink{#1}{\beamerbutton{{#2}}}}
+\newcommand{\myvbutton}[2]{\vfill\hyperlink{#1}{\beamerbutton{{#2}}}}
+
+% Color Scheme
+\definecolor{pittblue}{RGB}{28,41,87}
+\definecolor{pittgold}{RGB}{205,184,125}
+\setbeamercolor{structure}{fg=pittgold}
+\setbeamercolor{button}{bg=pittblue}
+
+\xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
+\title[Basic Unix/Linux]{{Basic Linux}}
+\author[Basic Unix/Linux]{{\textbf{Barry} (bmooreii), Fangping (fangping), Kim (kimwong), Ketan (ketan)}}
+\institute[CRC]{Center for Research Computing}
+\date{}
+
+\beamertemplatenavigationsymbolsempty
+
+\begin{document}
+
+\begin{frame}[label=started]{Getting Started}
+    \begin{itemize}
+        \item Log into the cluster, or
+        \item Only if you don't have access to the cluster! Download Git:
+        \begin{itemize}
+            \item Windows: install from \url{https://git-scm.com/downloads}
+            \item Mac: install from \url{https://git-scm.com/downloads}, or use a package manager (e.g. port or brew)
+            \item Linux: install from package manager (e.g. apt-get, yum, pacman)
+        \end{itemize}
+        \item Open Putty/Git bash (Windows) or Terminal Emulator (Mac/Linux)
+    \end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\scriptsize]{bash}{../code/getting-started.txt}
+\end{frame}
+
+\end{document}

@@ -47,7 +47,7 @@
 
 \begin{frame}[label=started]{Getting Started}
     \begin{itemize}
-        \item Download the slides from: \url{https://pitt.box.com/v/basic-unix-slides}
+        \item Download the slides from: \url{https://pitt.box.com/v/basic-linux-slides}
         \item Log into the cluster, or
         \item If you don't have access to the cluster, download Git
         \begin{itemize}
@@ -68,7 +68,7 @@
 \begin{frame}{Schedule}
 \begin{itemize}
     \item Today: Basic Linux
-    \item Wednesday 10/12 (9am -- 11am): CRC Cluster Usage
+    \item Wednesday 10/12 (8am -- 11am): CRC Cluster Usage
     \item Thursday 10/27 (10am -- 12pm): Linux Power Tools
     \item Thursday 11/10 (1:30pm -- 3:30pm): Python Programming
     \item Thursday 12/1 (8:00am -- 12:00pm): R Programming
@@ -96,9 +96,9 @@
         \item You are following along with the code
         \item Code snippets:
         \begin{itemize}
-            \item Lines which begin with `\$' are commands with, or without, arguments
-            \item Lines which begin with `\#' are comments
-            \item `<something>' means I want input from you
+            \item Lines which begin with \texttt{\$} are commands with, or without, arguments
+            \item Lines which begin with \texttt{\#} are comments
+            \item \texttt{\textless something \textgreater} means I want input from you
             \item All other lines are output from those commands
         \end{itemize}
         \item Mantras:
@@ -107,17 +107,28 @@
             \item You are always typing too much
             \item If you plan to do it more than once, write a script
         \end{itemize}
+        \item \color{red}{Type what you see, experiment!}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Text Editors}
+    \begin{itemize}
+        \item Use which one you like (\texttt{vim, emacs, nano, gedit}) 
+        \item Like Linux, an editor is a tool which takes time to learn
+        \item I was told to use Vim when I started, therefore I use Vim
+        \item My PhD advisor used Emacs, we are still friends
+        \item We can do a Vim presentation another time
     \end{itemize}
 \end{frame}
 
 \begin{frame}[label=general-1]{General-purpose utilities}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-1.txt}
-\myvbutton{exercises-1}{exercises}
+\myvbutton{exercises-1}{Exercises (1)}
 \end{frame}
 
 \begin{frame}[label=general-2]{General purpose utilities cont.}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-2.txt}
-\myvbutton{exercises-1}{exercises}
+\myvbutton{exercises-1}{Exercises (1)}
 \end{frame}
 
 \begin{frame}[label=navigate]{Navigate the Filesystem}
@@ -125,11 +136,12 @@
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-1.txt}
 \end{frame}
 
-\begin{frame}{The find command}
+\begin{frame}[label=find]{The find command}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-2.txt}
+\myvbutton{exercises-2}{Exercises (2)}
 \end{frame}
 
-\begin{frame}{How much space?}
+\begin{frame}[label=space]{How much space?}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-3.txt}
 \end{frame}
 
@@ -138,15 +150,17 @@
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-1.txt}
 \end{frame}
 
-\begin{frame}{Handling files: Permissions}
+\begin{frame}[label=permissions]{Handling files: Permissions}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-2.txt}
 \begin{center}
     \ig{0.75}{images/permissions.png}
 \end{center}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-3.txt}
+\vfill
+\mybutton{exercises-2}{Exercises (2)} \mybutton{exercises-3}{Exercises (3)}
 \end{frame}
 
-\begin{frame}{Handling files: ``cut and paste'' operations}
+\begin{frame}[label=cut-and-paste]{Handling files: ``cut and paste'' operations}
 % cat, table, cut, paste
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-4.txt}
 \end{frame}
@@ -154,7 +168,7 @@
 \begin{frame}[label=environment]{The Environment}
 %aliases, ps, export, history, PS1
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/the-environment-1.txt}
-\myvbutton{exercises-1}{exercises}
+\myvbutton{exercises-1}{Exercises (1)}
 \end{frame}
 
 \begin{frame}{Aliasing -- Shortcuts}
@@ -236,8 +250,9 @@
         \item CRC (formerly SaM) has an open door policy!
         \item Office Hours:
         \begin{itemize}
-            \item Monday,Wednesday 10-11am in Benedum 1145 
-            \item Doesn't work for you? Come bug me!
+            \item Tuesday,Thursday 2-3PM in Benedum 1145 
+            \item Doesn't work for you? Come bug us!
+            \item Want to learn something specific? We'll set up a tutorial!
         \end{itemize}
         \item Town Hall (Open Forum):
         \begin{itemize}
@@ -246,7 +261,15 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[label=exercises-1]{Exercises}
+\begin{frame}{Exercises Preparation}
+    \begin{itemize}
+        \item Navigate to the exercises directory
+        \item Button navigation in slides to-and-from questions/hints.
+        \item Don't hesitate to ask questions, that's why we are here!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-1]{Exercises (1)}
 \begin{itemize}
     \item Print system information on cluster (\mybutton{general-1}{hint})
     \item Print your username using environment variables to the command line
@@ -261,6 +284,47 @@
     (\mybutton{general-2}{hint})
     \item How long does the calculation take? (\mybutton{general-2}{hint})
 \end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-2]{Exercises (2)}
+    \begin{itemize}
+        \item Starting from your home directory, find all files (\mybutton{find}{hint}):
+        \begin{itemize}
+            \item Ending in \texttt{.txt} or \texttt{.sh}
+            \item Files which \emph{only} you can read, write, and execute
+            \begin{itemize}
+                \item \mybutton{permissions}{hint}, try searching for
+                ``permissions'' in man page
+            \end{itemize}
+            \item Files modified yesterday (hint: search for ``atime'' in man page)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-3]{Exercises (3)}
+    \begin{itemize}
+        \item Which login node are you on?
+        \item How much RAM is free on the machine?
+        \item How much space does mobydisk have left?
+        \item Change the permissions of \texttt{hello.py} to (\mybutton{permissions}{hint}):
+        \begin{itemize}
+            \item \texttt{rwxrwxrwx}
+            \item \texttt{rw-r-----}
+            \item \texttt{---rw-r--}
+            \item \texttt{rwx------}
+        \end{itemize}
+        \item Extract group names from \texttt{/etc/group} using a combination of:
+            \begin{itemize}
+                \item \texttt{tail}, (hint: search for \texttt{--lines} in man page)
+                \item \texttt{cut}, (\mybutton{cut-and-paste}{hint})
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-4]{Exercises (4)}
+    \begin{itemize}
+        \item Combine \texttt{names.txt} and \texttt{dates.txt}, columns should be separated by columns. 
+    \end{itemize}
 \end{frame}
 
 \end{document}

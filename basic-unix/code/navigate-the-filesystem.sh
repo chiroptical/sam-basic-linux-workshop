@@ -57,15 +57,19 @@ echo "$ df -h" > $fileThr
 df -h >> $fileThr
 echo "" >> $fileThr
 
-echo "$ du -s *" >> $fileThr
+echo "$ du -sh *" >> $fileThr
 cd ../examples
-du -s * >> ../code/$fileThr
+du -sh * >> ../code/$fileThr
 cd -
 echo "" >> $fileThr
 
 echo "$ free -g" >> $fileThr
 echo " not available on Mac (I use \`hostinfo | grep memory\` below)" | fold -w $width | sed 's/^/#/' >> $fileThr
-hostinfo | grep "memory" >> $fileThr
+if [ $(uname) == "Darwin" ]; then
+    hostinfo | grep "memory" >> $fileThr
+elif [ $(uname) == "Linux" ]; then
+    free -g >> $fileThr
+fi
 echo "" >> $fileThr
 
 echo "$ htop # if on cluster, or have it installed" >> $fileThr 
