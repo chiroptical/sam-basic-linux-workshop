@@ -45,12 +45,12 @@ echo "$ find . -type f" >> $fileTwo
 find ../examples -type f | sed 's/\.\.\/examples\///' | column -c $width >> $fileTwo
 echo "" >> $fileTwo
 
-echo "# Find files greater than 1GB" >> $fileTwo
+echo "$ # Find files greater than 1GB" >> $fileTwo
 echo "$ find . -size +1G" >> $fileTwo
 echo "" >> $fileTwo
 
 echo "$ find . -name \"*.txt\" -or -name \"*.py\"" >> $fileTwo
-find ../examples -name "*.txt" -o -name "*.py" | sed 's/\.\.\/examples\///' >> $fileTwo
+find ../examples -name "*.txt" -o -name "*.py" | sed 's/\.\.\/examples\///' | tr '\n' ' ' | fold -w $width >> $fileTwo
 echo "" >> $fileTwo
 
 echo "$ df -h" > $fileThr

@@ -13,15 +13,15 @@ echo "" >> $fileOne
 echo "$ less states.txt" >> $fileOne
 echo "" >> $fileOne
 
-echo "# arrow keys move around" >> $fileOne
+echo "$ # arrow keys move around" >> $fileOne
 echo "" >> $fileOne
-echo "# '/' searches, try searching for Alaska" >> $fileOne
+echo "$ # '/' searches, try searching for Alaska" >> $fileOne
 echo "" >> $fileOne
-echo "# 'G' takes you to bottom" >> $fileOne
+echo "$ # 'G' takes you to bottom" >> $fileOne
 echo "" >> $fileOne
-echo "# 'g' takes you to top" >> $fileOne
+echo "$ # 'g' takes you to top" >> $fileOne
 echo "" >> $fileOne
-echo "# 'q' quits" >> $fileOne
+echo "$ # 'q' quits" >> $fileOne
 echo "" >> $fileOne
 
 echo "$ cat states.txt | wc" >> $fileOne
@@ -36,8 +36,8 @@ echo "" >> $fileOne
 #stat ../examples/states.txt | sed 's/\.\.\/examples\///' >> $fileOne
 #echo "" >> $fileOne
 
-echo "$ ls -lh hello.py" > $fileTwo
-ls -lh ../examples/hello.py | sed 's/\.\.\/examples\///' | fold -w $width >> $fileTwo
+echo "$ ls -l hello.py" > $fileTwo
+ls -l ../examples/hello.py | sed 's/\.\.\/examples\///' | fold -w $width >> $fileTwo
 echo "" >> $fileTwo
 
 cp ../examples/hello.py .
@@ -49,16 +49,17 @@ chmod u-x,g-wx,o-rwx hello.py
 echo ""
 rm hello.py
 
-echo "# Concatenate two files" > $fileFou
+echo "$ # Concatenate two files" > $fileFou
 echo "$ cat states.txt names.txt" >> $fileFou
 echo "" >> $fileFou
-echo "# Cut a space delimited file into columns, keep #1" >> $fileFou
+echo "$ # Cut a space delimited file into columns, keep #1" >> $fileFou
 echo "$ cut -d\\  -f1 states.txt" >> $fileFou 
+echo "$ cut -d' ' -f1 states.txt" >> $fileFou 
 echo "" >> $fileFou
-echo "# Similar to cat, but side-by-side" >> $fileFou
+echo "$ # Similar to cat, but side-by-side" >> $fileFou
 echo "$ paste states.txt states.txt" >> $fileFou
 echo "" >> $fileFou
-echo "# Numbering lines" >> $fileFou
+echo "$ # Numbering lines" >> $fileFou
 echo "$ cat -n states.txt" >> $fileFou
 echo "" >> $fileFou
 echo "$ nl states.txt" >> $fileFou

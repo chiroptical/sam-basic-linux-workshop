@@ -17,7 +17,13 @@ width=50
 #uname -a | fold -w $width >> $fileOne
 #echo "" >> $fileOne
 
-echo "$ hostname" > $fileOne
+echo "$ # <command> <arguments...>" > $fileOne
+echo "" >> $fileOne
+
+echo "$ <command> # <arguments...>" >> $fileOne
+echo "" >> $fileOne
+
+echo "$ hostname" >> $fileOne
 hostname >> $fileOne
 echo "" >> $fileOne
 

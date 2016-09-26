@@ -97,7 +97,7 @@
         \item Code snippets:
         \begin{itemize}
             \item Lines which begin with \texttt{\$} are commands with, or without, arguments
-            \item Lines which begin with \texttt{\#} are comments
+            \item Lines which begin with \texttt{\$ \#} are comments
             \item \texttt{\textless something\textgreater} means I want input from you
             \item All other lines are output from those commands
         \end{itemize}
@@ -123,7 +123,8 @@
 
 \begin{frame}[label=general-1]{General-purpose utilities}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/general-purpose-utilities-1.txt}
-\myvbutton{exercises-1}{Exercises (1)}
+\vfill
+\mybutton{exercises-1}{Exercises (1)} \mybutton{exercises-2}{Exercises (2)}
 \end{frame}
 
 \begin{frame}[label=general-2]{General purpose utilities cont.}
@@ -137,15 +138,22 @@
 \end{frame}
 
 \begin{frame}[label=find]{The find command}
+\begin{itemize}
+    \item \texttt{.} means current directory (\texttt{\$PWD})
+    \item \texttt{..} means parent directory
+    \item \texttt{\textasciitilde} means home directory (\texttt{\$HOME})
+    \item \texttt{-} means previous directory (\texttt{\$OLDPWD})
+\end{itemize}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-2.txt}
 \myvbutton{exercises-2}{Exercises (2)}
 \end{frame}
 
 \begin{frame}[label=space]{How much space?}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-3.txt}
+\myvbutton{exercises-3}{Exercises (3)}
 \end{frame}
 
-\begin{frame}{Handling files}
+\begin{frame}[label=handle]{Handling files}
 %less, more, cat, wc, chmod, chown, umask, tar, gzip, gunzip
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-1.txt}
 \end{frame}
@@ -163,6 +171,8 @@
 \begin{frame}[label=cut-and-paste]{Handling files: ``cut and paste'' operations}
 % cat, table, cut, paste
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/handling-files-4.txt}
+\vfill
+\mybutton{exercises-3}{Exercises (3)} \mybutton{exercises-4}{Exercises (4)}
 \end{frame}
 
 \begin{frame}[label=environment]{The Environment}
@@ -171,7 +181,7 @@
 \myvbutton{exercises-1}{Exercises (1)}
 \end{frame}
 
-\begin{frame}{Aliasing -- Shortcuts}
+\begin{frame}[label=alias]{Aliasing -- Shortcuts}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/the-environment-2.txt}
 \begin{itemize}
     \item \color{red}{Don't use these for ssh!}
@@ -186,7 +196,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Filters: head, tail}
+\begin{frame}[label=head-tail]{Filters: head, tail}
 %head, tail, sort, column, uniq, tr, cut, paste 
 %awk, sed, grep
 \begin{itemize}
@@ -195,15 +205,15 @@
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-1.txt}
 \end{frame}
 
-\begin{frame}{Filters: sort, uniq, tr}
+\begin{frame}[label=sort-uniq-tr]{Filters: sort, uniq, tr}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-2.txt}
 \end{frame}
 
-\begin{frame}{Filters: grep, awk, sed}
+\begin{frame}[label=grep-awk-sed]{Filters: grep, awk, sed}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/simple-filters-3.txt}
 \end{frame}
 
-\begin{frame}{The Lynyrd Skynyrd Filter}
+\begin{frame}[label=lynyrd]{The Lynyrd Skynyrd Filter}
 \begin{itemize}
     \item Southern Rock Band, `y' is their vowel of choice.
     \item Replace all of the vowels in `doctored.txt' with `y'
@@ -214,25 +224,26 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The Shell: Wildcards}
+\begin{frame}[label=wildcards]{The Shell: Wildcards}
 \begin{itemize}
     \item You are working in a ``shell'' right now!
     \item This one is Bash, but others exist.
 \end{itemize}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-1.txt}
 %wildcards, escaping and quoting, redirection, tee
+\myvbutton{exercises}{Exercises (2)}
 \end{frame}
 
-\begin{frame}{The Shell: Redirection}
+\begin{frame}[label=redirection]{The Shell: Redirection}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-2.txt}
 \end{frame}
 
-\begin{frame}{Remote Connectivity and Networks}
+\begin{frame}[label=ssh]{Remote Connectivity and Networks}
 %ssh, scp, rsync, ftp, curl
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/ssh-config-1.txt}
 \end{frame}
 
-\begin{frame}{Compression}
+\begin{frame}[label=compression]{Compression}
 \begin{itemize}
     \item \texttt{gzip} is the standard compression tool
     \item \texttt{tar} is an archiving tool
@@ -265,9 +276,16 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Questionnaire}
+    \begin{itemize}
+        \item At some point I will send a questionnaire to participants
+        \item I would love your feedback
+    \end{itemize}    
+\end{frame}
+
 \begin{frame}{Exercises Preparation}
     \begin{itemize}
-        \item Navigate to the exercises directory
+        \item Navigate to the \texttt{exercises} directory
         \item Button navigation in slides to-and-from questions/hints.
         \item Don't hesitate to ask questions, that's why we are here!
         \item There are no exercises for Bash history, try using it anyway
@@ -295,7 +313,7 @@
     \begin{itemize}
         \item Starting from your home directory, find all files (\mybutton{find}{hint}):
         \begin{itemize}
-            \item Ending in \texttt{.txt} or \texttt{.sh}
+            \item Ending in \texttt{.txt} or \texttt{.sh} (\mybutton{wildcards}{hint})
             \item Files which \textbf{only} you can read, write, and execute
             \begin{itemize}
                 \item \mybutton{permissions}{hint}, try searching for
@@ -308,9 +326,9 @@
 
 \begin{frame}[label=exercises-3]{Exercises (3)}
     \begin{itemize}
-        \item Which login node are you on?
-        \item How much RAM is free on the machine?
-        \item How much space does mobydisk have left?
+        \item Which login node are you on? (\mybutton{general-1}{hint})
+        \item How much RAM is free on the machine? (\mybutton{space}{hint})
+        \item How much space does mobydisk have left? (\mybutton{space}{hint})  
         \item Change the permissions of \texttt{hello.py} to (\mybutton{permissions}{hint}):
         \begin{itemize}
             \item \texttt{rwxrwxrwx}
@@ -323,17 +341,18 @@
                 \item \texttt{tail} (hint: search for \texttt{--lines} in man page)
                 \item \texttt{cut} (\mybutton{cut-and-paste}{hint})
             \end{itemize}
+            (hint: don't forget to look at the file first \texttt{cat /etc/group})
     \end{itemize}
 \end{frame}
 
 \begin{frame}[label=exercises-4]{Exercises (4)}
     \begin{itemize}
-        \item Combine \texttt{names.txt} and \texttt{dates.txt}
+        \item Combine \texttt{names.txt} and \texttt{dates.txt} (\mybutton{cut-and-paste}{hint})
         \begin{itemize}
-            \item columns separated by commas
-            \item lines should be numbered
+            \item columns separated by commas (hint: see man page)
+            \item lines should be numbered (hint: see man page)
         \end{itemize}
-        \item Make \texttt{hello.py} executable and append to \texttt{\$PATH}
+        \item Make \texttt{hello.py} executable and prepend directory to \texttt{\$PATH}
         \begin{itemize}
             \item Be careful not to overwrite current \texttt{\$PATH}!
         \end{itemize}
@@ -368,6 +387,7 @@
 
 \begin{frame}[label=exercises-6]{Exercises (6)}
 \begin{itemize}
+    \item Are \texttt{ls \{1..10\}.txt} and \texttt{ls \$(seq 1 10).txt} different? Why?
     \item Set up passwordless SSH
     \item Archive the contents of \texttt{exercises} with BZIP2 compression
     \item Let's revisit the Lynyrd Skynyrd algorithm. We want our algorithm to

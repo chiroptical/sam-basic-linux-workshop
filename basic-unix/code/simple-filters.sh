@@ -10,6 +10,7 @@ width=50
 echo "$ cat states.txt" > $fileOne
 echo "" >> $fileOne
 
+echo "$ # head -n 5 states.txt" >> $fileOne
 echo "$ head -5 states.txt" >> $fileOne
 head -5 ../examples/states.txt | fold -w $width >> $fileOne
 echo "" >> $fileOne
@@ -34,10 +35,10 @@ echo "" >> $fileTwo
 echo "$ !! --ignore-case --unique" >> $fileTwo
 echo "" >> $fileTwo
 
-echo "# What if I want to count the entries?" >> $fileTwo
+echo "$ # What if I want to count the entries?" >> $fileTwo
 echo "" >> $fileTwo
 
-echo "# Sorted, unique, and all uppercase" >> $fileTwo
+echo "$ # Sorted, unique, and all uppercase" >> $fileTwo
 echo "$ !s | tr [:lower:] [:upper:]" >> $fileTwo
 echo "" >> $fileTwo
 
