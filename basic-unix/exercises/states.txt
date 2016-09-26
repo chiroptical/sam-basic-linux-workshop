@@ -1,0 +1,53 @@
+=============================================
+State          Abbr     Postal    Capital
+=============================================
+Minnesota      Minn.      MN     St. Paul
+North Dakota   N.D.       ND     Bismarck
+West Virginia  W.Va.      WV     Charleston
+Alaska         Alaska     AK     Juneau
+Louisiana      La.        LA     Baton Rouge
+Georgia        Ga.        GA     Atlanta
+Massachusetts  Mass.      MA     Boston
+Idaho          Idaho      ID     Boise
+Michigan       Mich.      MI     Lansing
+Vermont        Vt.        VT     Montpelier
+New York       N.Y.       NY     Albany
+Delaware       Del.       DE     Dover
+Nevada         Nev.       NV     Carson City
+Alabama        Ala.       AL     Montgomery
+Kentucky       Ky.        KY     Frankfort
+Ohio           Ohio       OH     Columbus
+Mississippi    Miss.      MS     Jackson
+Pennsylvania   Pa.        PA     Harrisburg
+Arizona        Ariz.      AZ     Phoenix
+Colorado       Colo.      CO     Denver
+New Hampshire  N.H.       NH     Concord
+Utah           Utah       UT     Salt Lake City
+South Carolina S.C.       SC     Columbia
+Rhode Island   R.I.       RI     Providence
+Illinois       Ill.       IL     Springfield
+Iowa           Iowa       IA     Des Moines
+Missouri       Mo.        MO     Jefferson City
+Oklahoma       Okla.      OK     Oklahoma City
+Texas          Tex.       TX     Austin
+Kansas         Kans.      KS     Topeka
+Oregon         Ore.       OR     Salem
+New Mexico     N.M.       NM     Santa Fe
+Wyoming        Wyo.       WY     Cheyenne
+Tennessee      Tenn.      TN     Nashville
+New Jersey     N.J.       NJ     Trenton
+Indiana        Ind.       IN     Indianapolis
+Connecticut    Conn.      CT     Hartford
+North Carolina N.C.       NC     Raleigh
+Wisconsin      Wis.       WI     Madison
+Maine          Maine      ME     Augusta
+Virginia       Va.        VA     Richmond
+Arkansas       Ark.       AR     Little Rock
+Washington     Wash.      WA     Olympia
+South Dakota   S.D.       SD     Pierre
+California     Calif.     CA     Sacramento
+Maryland       Md.        MD     Annapolis
+Nebraska       Nebr.      NE     Lincoln
+Hawaii         Hawaii     HI     Honolulu
+Florida        Fla.       FL     Tallahassee
+Montana        Mont.      MT     Helena

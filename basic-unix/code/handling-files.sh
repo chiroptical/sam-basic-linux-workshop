@@ -7,10 +7,21 @@ fileFou=handling-files-4.txt
 # 18 rows and 50 columns works for fontsize=\footnotesize
 width=50
 
-echo "$ less states.txt" > $fileOne
+echo "$ cat states.txt" > $fileOne
 echo "" >> $fileOne
 
-echo "$ cat states.txt" >> $fileOne
+echo "$ less states.txt" >> $fileOne
+echo "" >> $fileOne
+
+echo "# arrow keys move around" >> $fileOne
+echo "" >> $fileOne
+echo "# '/' searches, try searching for Alaska" >> $fileOne
+echo "" >> $fileOne
+echo "# 'G' takes you to bottom" >> $fileOne
+echo "" >> $fileOne
+echo "# 'g' takes you to top" >> $fileOne
+echo "" >> $fileOne
+echo "# 'q' quits" >> $fileOne
 echo "" >> $fileOne
 
 echo "$ cat states.txt | wc" >> $fileOne
@@ -38,7 +49,17 @@ chmod u-x,g-wx,o-rwx hello.py
 echo ""
 rm hello.py
 
-echo "$ cat states.txt names.txt" > $fileFou
+echo "# Concatenate two files" > $fileFou
+echo "$ cat states.txt names.txt" >> $fileFou
+echo "" >> $fileFou
+echo "# Cut a space delimited file into columns, keep #1" >> $fileFou
 echo "$ cut -d\\  -f1 states.txt" >> $fileFou 
+echo "" >> $fileFou
+echo "# Similar to cat, but side-by-side" >> $fileFou
 echo "$ paste states.txt states.txt" >> $fileFou
+echo "" >> $fileFou
+echo "# Numbering lines" >> $fileFou
+echo "$ cat -n states.txt" >> $fileFou
+echo "" >> $fileFou
 echo "$ nl states.txt" >> $fileFou
+echo "" >> $fileFou

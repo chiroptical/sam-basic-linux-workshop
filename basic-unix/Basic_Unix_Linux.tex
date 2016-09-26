@@ -38,7 +38,7 @@
 \xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
 \title[Basic Unix/Linux]{{Basic Linux}}
 \author[Basic Unix/Linux]{{\textbf{Barry} (bmooreii), Fangping (fangping), Kim (kimwong), Ketan (ketan)}}
-\institute[CRC]{Center for Research Computing}
+\institute[SaM]{Center for Simulation and Modeling}
 \date{}
 
 \beamertemplatenavigationsymbolsempty
@@ -68,7 +68,7 @@
 \begin{frame}{Schedule}
 \begin{itemize}
     \item Today: Basic Linux
-    \item Wednesday 10/12 (8am -- 11am): CRC Cluster Usage
+    \item Wednesday 10/12 (8am -- 11am): SaM Cluster Usage
     \item Thursday 10/27 (10am -- 12pm): Linux Power Tools
     \item Thursday 11/10 (1:30pm -- 3:30pm): Python Programming
     \item Thursday 12/1 (8:00am -- 12:00pm): R Programming
@@ -98,7 +98,7 @@
         \begin{itemize}
             \item Lines which begin with \texttt{\$} are commands with, or without, arguments
             \item Lines which begin with \texttt{\#} are comments
-            \item \texttt{\textless something \textgreater} means I want input from you
+            \item \texttt{\textless something\textgreater} means I want input from you
             \item All other lines are output from those commands
         \end{itemize}
         \item Mantras:
@@ -114,10 +114,10 @@
 \begin{frame}{Text Editors}
     \begin{itemize}
         \item Use which one you like (\texttt{vim, emacs, nano, gedit}) 
-        \item Like Linux, an editor is a tool which takes time to learn
+        \item Similarly to Linux, an editor is a tool which takes time to learn
         \item I was told to use Vim when I started, therefore I use Vim
-        \item My PhD advisor used Emacs, we are still friends
-        \item We can do a Vim presentation another time
+        \item My PhD advisor uses Emacs, we are still friends
+        \item Any interest in a Vim presentation?
     \end{itemize}
 \end{frame}
 
@@ -217,7 +217,7 @@
 \begin{frame}{The Shell: Wildcards}
 \begin{itemize}
     \item You are working in a ``shell'' right now!
-    \item This one is Bash, but there are others.
+    \item This one is Bash, but others exist.
 \end{itemize}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/shell-1.txt}
 %wildcards, escaping and quoting, redirection, tee
@@ -233,26 +233,30 @@
 \end{frame}
 
 \begin{frame}{Compression}
-    \begin{itemize}
-        \item tar
-    \end{itemize}
+\begin{itemize}
+    \item \texttt{gzip} is the standard compression tool
+    \item \texttt{tar} is an archiving tool
+\end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/compression-1.txt}
 \end{frame}
 
 \begin{frame}{``Scripts''}
     \begin{itemize}
-        \item PBS script for example. 
+        \item Example SLURM script
     \end{itemize}
+\inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/benzene.slurm}
 \end{frame}
 
 \begin{frame}{Are you overwhelmed?}
     \begin{itemize}
         \item Post a ticket and ask for help: \url{http://core.sam.pitt.edu/support-howto}
-        \item CRC (formerly SaM) has an open door policy!
+        \item SaM has an open door policy!
         \item Office Hours:
         \begin{itemize}
-            \item Tuesday,Thursday 2-3PM in Benedum 1145 
+            \item Monday/Friday 11AM--12PM Benedum 1144
+            \item Tuesday 2--3PM Benedum 1145 
             \item Doesn't work for you? Come bug us!
-            \item Want to learn something specific? We'll set up a tutorial!
+            \item Want to learn something specific? Set up a tutorial!
         \end{itemize}
         \item Town Hall (Open Forum):
         \begin{itemize}
@@ -266,6 +270,7 @@
         \item Navigate to the exercises directory
         \item Button navigation in slides to-and-from questions/hints.
         \item Don't hesitate to ask questions, that's why we are here!
+        \item There are no exercises for Bash history, try using it anyway
     \end{itemize}
 \end{frame}
 
@@ -291,7 +296,7 @@
         \item Starting from your home directory, find all files (\mybutton{find}{hint}):
         \begin{itemize}
             \item Ending in \texttt{.txt} or \texttt{.sh}
-            \item Files which \emph{only} you can read, write, and execute
+            \item Files which \textbf{only} you can read, write, and execute
             \begin{itemize}
                 \item \mybutton{permissions}{hint}, try searching for
                 ``permissions'' in man page
@@ -315,16 +320,69 @@
         \end{itemize}
         \item Extract group names from \texttt{/etc/group} using a combination of:
             \begin{itemize}
-                \item \texttt{tail}, (hint: search for \texttt{--lines} in man page)
-                \item \texttt{cut}, (\mybutton{cut-and-paste}{hint})
+                \item \texttt{tail} (hint: search for \texttt{--lines} in man page)
+                \item \texttt{cut} (\mybutton{cut-and-paste}{hint})
             \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}[label=exercises-4]{Exercises (4)}
     \begin{itemize}
-        \item Combine \texttt{names.txt} and \texttt{dates.txt}, columns should be separated by columns. 
+        \item Combine \texttt{names.txt} and \texttt{dates.txt}
+        \begin{itemize}
+            \item columns separated by commas
+            \item lines should be numbered
+        \end{itemize}
+        \item Make \texttt{hello.py} executable and append to \texttt{\$PATH}
+        \begin{itemize}
+            \item Be careful not to overwrite current \texttt{\$PATH}!
+        \end{itemize}
+        \item Output from \texttt{ls} is colored, why? (try \texttt{which ls})
+        \begin{itemize}
+            \item use an alias to make \texttt{grep}'s behavior the same.
+        \end{itemize}
+        \item Review the \texttt{--lines} documentation for \texttt{tail}
+        \begin{itemize}
+            \item Using the \texttt{+NUM} feature print the states from \texttt{states.txt}
+        \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-5]{Exercises (5)}
+\begin{itemize}
+    \item Use \texttt{tr} to remove extraneous whitespace from \texttt{states.txt}
+    \item Add 1 to the 3rd column of \texttt{random.txt} using \texttt{awk}
+    \item All of the ``New'' states have decided they are now ``Relatively New''.
+    \begin{itemize}
+        \item replace ``New'' with ``Relatively New'' using \texttt{sed} 
+        \item Extra, try using capture groups (hint: Try \texttt{echo "hello" |
+        sed 's|\textbackslash(hello\textbackslash)|\textbackslash1|'} on the
+        command line. The ``\textbackslash( \textbackslash)'' captures what is
+        inside, use \textbackslash1,\textbackslash2,\textbackslash3 etc. to
+        reference captures.).
+    \end{itemize}
+    \item List all of the states postal codes in a \texttt{for} loop prefaced by "Postal"
+    \item Append all of the \texttt{txt} files in this directory to a new file \texttt{all.txt}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=exercises-6]{Exercises (6)}
+\begin{itemize}
+    \item Set up passwordless SSH
+    \item Archive the contents of \texttt{exercises} with BZIP2 compression
+    \item Let's revisit the Lynyrd Skynyrd algorithm. We want our algorithm to
+    work on both \texttt{names.txt,doctored.txt} but \texttt{sed} isn't
+    powerful enough to do it easily (take my word for it). We need
+    \texttt{perl}'s ``lookbehind'' functionality; read the first 4 sections of
+    \url{http://www.regular-expressions.info/lookaround.html}. You will need to
+    fill in the command \texttt{perl "<EXPRESSION>" names.txt}. Ask youself,
+    \begin{itemize}
+        \item What was wrong with the \texttt{sed} command?
+        \item What am I trying to accomplish?
+        \item What should be behind what?
+        \item Why lookbehind and not lookahead?
+    \end{itemize}
+\end{itemize}
 \end{frame}
 
 \end{document}
