@@ -51,6 +51,6 @@ echo "" >> $fileThr
 echo "$ # Search history for last command which contains" >> $fileThr
 echo "!?-l" >> $fileThr
 echo "" >> $fileThr
-echo " Get a specific argument of a previous command in history" | fold -w $width | sed 's/^/#/' >> $fileThr
-echo "echo !?hello.py:1" >> $fileThr
-echo "" >> $fileThr
+#echo " Get a specific argument of a previous command in history" | fold -w $width | sed 's/^/#/' >> $fileThr
+#echo "echo !?hello.py:1" >> $fileThr
+#echo "" >> $fileThr

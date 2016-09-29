@@ -26,7 +26,7 @@ echo "" >> $fileOne
 echo "$ cat names.txt" > $fileTwo
 echo "" >> $fileTwo
 
-echo "$ sort !!:1" >> $fileTwo
+echo "$ sort names.txt" >> $fileTwo
 echo "" >> $fileTwo
 
 echo "$ sort --key 2 names.txt" >> $fileTwo
@@ -53,7 +53,7 @@ echo "" >> $fileTwo
 #echo "" >> $fileTwo
 
 echo "$ echo \"Leeeeeeeeeeeeeeeeeeeeemon\" | tr -s 'e' 'e'" >> $fileTwo
-echo \"Leeeeeeeeeeeeeeeeeeeeemon\" | tr -s 'e' 'e' >> $fileTwo
+echo "Leeeeeeeeeeeeeeeeeeeeemon" | tr -s 'e' 'e' >> $fileTwo
 echo "" >> $fileThr
 
 echo "$ grep \"Alaska\" states.txt" > $fileThr

@@ -12,7 +12,7 @@ echo "$ gzip states.txt" >> $fOne
 echo "" >> $fOne
 echo "$ # What happened to states.txt?" >> $fOne
 echo "" >> $fOne
-echo "$ gunzip states.txt" >> $fOne
+echo "$ gunzip states.txt.gz" >> $fOne
 echo "" >> $fOne
 
 echo "$ # Archive with tar and compress with gzip" >> $fOne

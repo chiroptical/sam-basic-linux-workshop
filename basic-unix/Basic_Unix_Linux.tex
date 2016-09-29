@@ -82,7 +82,7 @@
             \item general purpose utilities
             \item navigating file systems
             \item handling files
-            \item the linux environment
+            \item the Linux environment
             \item basic filters
             \item remote operations and copying files
         \end{itemize}
@@ -132,7 +132,7 @@
 \myvbutton{exercises-1}{Exercises (1)}
 \end{frame}
 
-\begin{frame}[label=navigate]{Navigate the Filesystem}
+\begin{frame}[label=navigate]{Navigate the file system}
 \mybutton{started}{change directory}
 \inputminted[bgcolor=lightgray,linenos,fontsize=\footnotesize]{bash}{code/navigate-the-filesystem-1.txt}
 \end{frame}
@@ -268,7 +268,7 @@
 \begin{frame}{Are you overwhelmed?}
     \begin{itemize}
         \item Post a ticket and ask for help: \url{http://core.sam.pitt.edu/support-howto}
-        \item SaM has an open door policy!
+        \item SaM has an open door policy! (Benedum 1144)
         \item Office Hours:
         \begin{itemize}
             \item Monday/Friday 11AM--12PM Benedum 1144
@@ -278,7 +278,7 @@
         \end{itemize}
         \item Town Hall (Open Forum):
         \begin{itemize}
-            \item First Thursday of the Month 11am-12pm in Benedum 1145
+            \item First Thursday of the Month 11am--12pm in Benedum 1145
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -293,7 +293,7 @@
 \begin{frame}{Exercises Preparation}
     \begin{itemize}
         \item Navigate to the \texttt{exercises} directory
-        \item Button navigation in slides to-and-from questions/hints.
+        \item Button navigation in slides to--and--from questions/hints.
         \item Don't hesitate to ask questions, that's why we are here!
         \item There are no exercises for Bash history, try using it anyway
     \end{itemize}
@@ -419,23 +419,32 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Exercises (Difficult 2)}
+\begin{frame}[label=difficult]{Exercises (Difficult 2)}
 \begin{itemize}
     \item Let's revisit the Lynyrd Skynyrd algorithm. We want our algorithm to
-    work on both \texttt{names.txt,doctored.txt} but \texttt{sed} isn't
-    powerful enough to do it easily (take my word for it). We need
+    work on both \texttt{names.txt,doctored.txt} but \texttt{sed} lacks
+    a feature to do it easily (take my word for it). We need
     \texttt{perl}'s ``lookbehind'' functionality; read the first 4 sections of
-    \url{http://www.regular-expressions.info/lookaround.html}. Ask youself,
+    \url{http://www.regular-expressions.info/lookaround.html}. After, ask youself:
     \begin{itemize}
-        \item What was wrong with the \texttt{sed} command?
+        \item What was wrong with the \texttt{sed} command? (\mybutton{lynyrd}{hint})
         \begin{itemize}
-            \item i.e. what happened to ``erin'' vs ``ken''?
+            \item e.g. apply the filter to ``erin'' vs ``ken'', we want ``eryn'' and ``kyn''
         \end{itemize}
-        \item Looking at the above, what should we lookbehind in the `e's for both names?
+        \item Looking at the above example, what should be behind the vowels we want to replace?
         \item Why lookbehind and not lookahead?
     \end{itemize}
     \item Command: \texttt{perl -p -e "s|(?<=<lookbehind for what>)<what to lookbehind>|<replace with what>|g" names.txt}
+    \item \mybutton{perl-helper}{hint}
 \end{itemize}
+\end{frame}
+
+\begin{frame}[label=perl-helper]{Perl Helper}
+\begin{itemize}
+    \item Try using \url{https://www.debuggex.com/cheatsheet/regex/pcre}
+    \item Look in the ``Regular Expression Character Classes'' section
+\end{itemize} 
+\myvbutton{difficult}{Exercises (Difficult 2)}
 \end{frame}
 
 \end{document}
